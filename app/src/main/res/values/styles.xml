@@ -15,19 +15,26 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
 
     </style>
 
     <style name="verticalLine">
-        <item name="android:background">@android:color/holo_blue_dark</item>
-        <item name="android:layout_width">5dp</item>
+
+        <item name="dividerVertical" />
+
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:layout_width">2dp</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="color">@color/black</item>
+
     </style>
 
     <style name="horizontal">
-        <item name="android:background">@android:color/holo_blue_dark</item>
+        <item name="dividerHorizontal" />
+        <item name="android:background">@android:color/darker_gray</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">5dp</item>
+        <item name="android:layout_height">2dp</item>
     </style>
 
 </resources>

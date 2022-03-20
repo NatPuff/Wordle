@@ -8,8 +8,9 @@
 
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="492dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="388dp"
+        android:layout_height="419dp"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,15 +20,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <View style="@style/horizontal"/>
         <LinearLayout style="@style/row">
+
+
+
+            <View style="@style/verticalLine"/>
 
             <TextView
                 android:id="@+id/a1"
-                android:text=""
+                style="@style/column"
+                android:text="" />
 
-                style="@style/column" />
 
             <View style="@style/verticalLine" />
+
+
+
+
 
             <TextView
                 android:id="@+id/a2"
@@ -50,12 +60,17 @@
             <TextView
                 android:id="@+id/a5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
-        <View style="@style/horizontal" />
+        <View style="@style/horizontal"
+            android:padding="2dp"/>
+
+
 
         <LinearLayout style="@style/row">
+            <View style="@style/verticalLine" />
 
             <TextView
                 android:id="@+id/b1"
@@ -84,13 +99,14 @@
             <TextView
                 android:id="@+id/b5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
         <View style="@style/horizontal" />
 
         <LinearLayout style="@style/row">
-
+            <View style="@style/verticalLine" />
 
             <TextView
                 android:id="@+id/c1"
@@ -119,12 +135,14 @@
             <TextView
                 android:id="@+id/c5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
         <View style="@style/horizontal" />
 
         <LinearLayout style="@style/row">
+            <View style="@style/verticalLine" />
 
             <TextView
                 android:id="@+id/d1"
@@ -154,12 +172,14 @@
             <TextView
                 android:id="@+id/d5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
         <View style="@style/horizontal" />
 
         <LinearLayout style="@style/row">
+            <View style="@style/verticalLine" />
 
             <TextView
                 android:id="@+id/e1"
@@ -188,12 +208,14 @@
             <TextView
                 android:id="@+id/e5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
         <View style="@style/horizontal" />
 
         <LinearLayout style="@style/row">
+            <View style="@style/verticalLine" />
 
             <TextView
                 android:id="@+id/f1"
@@ -222,10 +244,11 @@
             <TextView
                 android:id="@+id/f5"
                 style="@style/column" />
+            <View style="@style/verticalLine" />
 
         </LinearLayout>
 
-
+<View style="@style/horizontal"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -233,10 +256,9 @@
         android:id="@+id/lettersLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <androidx.constraintlayout.helper.widget.Flow
@@ -523,12 +545,35 @@
         android:id="@+id/Check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="532dp"
         android:text="Enter"
+        app:layout_constraintBottom_toBottomOf="@+id/lettersLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="newGame"
+        app:layout_constraintBottom_toBottomOf="@+id/lettersLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.661" />
+
+    <TextView
+        android:id="@+id/gameMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/lettersLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.608" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
